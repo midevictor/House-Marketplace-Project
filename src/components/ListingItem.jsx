@@ -11,7 +11,7 @@ function ListingItem({ listing, id , onDelete}) {
         className="categoryListingLink"
       >
         <img
-          src={listing.imageurls[0]}
+          // src={listing.imgUrls[0]}
           alt={listing.name}
           className="categoryListingImg"
         />
@@ -21,7 +21,7 @@ function ListingItem({ listing, id , onDelete}) {
           <p className="categoryListingPrice">
             $
             {listing.offer
-              ? listing.discountedPrice
+              ? listing.discountedPrice   
                   .toString()
                   .replace(/\B(?=(\d{3}) + (?!\d))/g, ",")
               : listing.regularPrice

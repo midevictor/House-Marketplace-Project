@@ -36,14 +36,14 @@ function Category() {
 
         //exceute the query
         const querySnap = await getDocs(q);
-        const listing = [];
+        const listings = [];
         querySnap.forEach((doc) => {
-          return listing.push({
+          return listings.push({
             id: doc.id,
             data: doc.data(),
           });
         });
-        setListings(listing);
+        setListings(listings);
         setLoading(false);
       } catch (error) {
         toast.error("could  not fetch listings");
