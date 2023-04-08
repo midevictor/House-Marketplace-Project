@@ -17,7 +17,7 @@ function ForgotPassword() {
       await sendPasswordResetEmail(auth, email);
       toast.success("Password Reset Link Sent");
     } catch (error) {
-      toast.error("Coul not reset Email");
+      toast.error("Could not reset Email");
     }
   };
   return (

@@ -16,7 +16,7 @@ import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
 
 function CreateListing() {
-  const [geolocationEnabled, setGeolocationEnabled] = useState(true);
+  const [geolocationEnabled, setGeolocationEnabled] = useState(false );
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "rent",

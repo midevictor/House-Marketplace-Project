@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { getAuth, updateProfile } from "firebase/auth";
 import { updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebase.config";
@@ -28,7 +28,7 @@ function Profile() {
         await updateProfile(auth.currentUser, {
           displayName: name, 
         })
-        // update in firstore
+        // update in firestore
         const userRef = doc(db, "users",auth.currentUser.uid)
         await updateDoc(userRef, {
           name: name,
